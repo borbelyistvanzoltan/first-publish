@@ -1,5 +1,23 @@
 package sandbox;
 
+class ImplementsRunnable implements Runnable {
+
+	@Override
+	public void run() {
+		while (true) {
+			System.out.println("Runnable szal");
+
+			try {
+				Thread.sleep(3500);
+			} catch (InterruptedException ex) {
+				Thread.currentThread().interrupt();
+			}
+
+		}
+	}
+	
+}
+
 class MasikSzal extends Thread {
 	public void run() {
 		while (true) {
@@ -44,10 +62,13 @@ class Threads {
 	}
 
 	public static void main(String args[]) {
-
+		ImplementsRunnable rc = new ImplementsRunnable();
+		rc.run();
 		new MasikSzal().start();
 		new HarmadikSzal().start();
 		run();
+		
+		
 
 	}
 }

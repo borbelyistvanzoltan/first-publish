@@ -17,7 +17,7 @@ public class BoundedTypeParametersNaturalNumber {
 	
 	public static void main(String args){
 		
-		NaturalNumber<> integerNaturalNumber = new NaturalNumber<>();
+//		NaturalNumber<> integerNaturalNumber = new NaturalNumber<>();
 		
 	}
 
